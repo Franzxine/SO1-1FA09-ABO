@@ -1,1 +1,23 @@
+import math
 
+# Prompt the user to enter the x and y coordinates for both points
+point1_x = float(input("Enter x1: "))
+point1_y = float(input("Enter y1: "))
+point2_x = float(input("Enter x2: "))
+point2_y = float(input("Enter y2: "))
+
+# Calculate horizontal and vertical distances between the two points
+delta_x = point2_x - point1_x
+delta_y = point2_y - point1_y
+
+# Calculate the Euclidean distance using math.pow() and math.sqrt()
+# Formula: distance = sqrt((x2 - x1)^2 + (y2 - y1)^2)
+distance = math.sqrt(math.pow(delta_x, 2) + math.pow(delta_y, 2))
+
+# Display the formatted result rounded to 2 decimal places
+print(f"The distance between ({point1_x}, {point1_y}) and ({point2_x}, {point2_y}) is {distance:.2f}")
+
+'''
+Reflection:
+Using a library is way more practical because it saves you from reinventing the wheel for complex math operations. In this task, functions like math.sqrt() and math.pow() let me write the distance formula cleanly in just one line. Without the library, figuring out a square root manually would mean writing a whole extra algorithm, making the code much longer and easier to mess up.
+'''
